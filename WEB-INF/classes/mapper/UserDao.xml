@@ -9,4 +9,10 @@
         FROM user
         WHERE user_id=#{userId};
     </select>
+
+    <insert id="registerNewUser">
+        insert ignore into user(user_name,password,user_phone,user_email,user_sex,user_age,user_pic_url)
+        values
+        (#{user.userName},#{user.password},#{user.userPhone},#{user.userEmail},#{user.userSex},#{user.userAge},#{user.userPicUrl});
+    </insert>
 </mapper>
