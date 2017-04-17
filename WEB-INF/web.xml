@@ -13,7 +13,13 @@
     <filter-mapping>
         <filter-name>springSessionRepositoryFilter</filter-name>
         <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>ERROR</dispatcher>
     </filter-mapping>
+    
+    <listener>
+        <listener-class>com.laiwanba.listener.OnlineUserLinstener</listener-class>
+    </listener>
 
     <servlet>
         <servlet-name>laiwanba-dispatcher</servlet-name>
